@@ -1,5 +1,6 @@
-import "./styles/index.css";
+import "../styles/index.scss";
 import React from "react";
+import Recipes from "./Recipes";
 
 const App = () => {
   return (
@@ -7,7 +8,7 @@ const App = () => {
       <section className="hero"></section>
       <main>
         <section>
-          <h1>Hi React</h1>
+          <Recipes />
         </section>
       </main>
     </>
