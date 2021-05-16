@@ -1,4 +1,7 @@
+import { render } from "react-dom";
 import "./styles/index.scss";
+
+render(<h1>Hello, React</h1>, document.getElementById("root"));
 
 const elvenShieldRecipe = {
   leatherStripes: 2,
