@@ -8,9 +8,10 @@ const App = () => {
       <section className="hero"></section>
       <main>
         <section>
-          <Recipes />
+          <h1>Hi React</h1>
         </section>
       </main>
+      <Recipes />
     </>
   );
 };
