@@ -12,6 +12,10 @@ module.exports = {
   mode: mode,
   target: target,
 
+  output: {
+    assetModuleFilename: "images/[hash][ext]",
+  },
+
   module: {
     rules: [
       {
