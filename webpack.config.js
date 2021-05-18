@@ -7,9 +7,19 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 let mode = "development";
 let target = "web";
 
+const plugins = [
+  new CleanWebpackPlugin(),
+  new MiniCssExtractPlugin(),
+  new HtmlWebpackPlugin({
+    template: "./src/index.html",
+  }),  
+],
+
 if (process.env.NODE_ENV === "production") {
   mode = "production";
   target = "browserslist";
+} else {
+  plugins.push(new ReactRefreshWebpackPlugin())
 }
 
 module.exports = {
@@ -50,14 +60,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-    new ReactRefreshWebpackPlugin(),
-  ],
+  plugins: plugins,
   resolve: {
     extensions: [".js", ".jsx"],
   },
